@@ -8,16 +8,18 @@
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -26,25 +28,46 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Sumeru</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">
+                    <div class="image"><img src="~/images/logo.png" /></div>
+                </a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a><b style="color: #0071bb">পরিবেশ ও স্বাস্থ্য সচেতনতায় বিশ্বস্ত সহযোগী</b></a></li>
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
             </div>
         </div>
     </nav>
+    <div class="social-links">
+        <ul>
+            <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fab fa-youtube-square"></i></a></li>
+        </ul>
+    </div>
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; 2019 - Sumeru</p>
-        </footer>
     </div>
+    <footer class="footer">
+        <nav class="nav-bottom">
+            <div class="container">
+                <ul class="nav-ul">
+                    <li><a asp-controller="Home" asp-action="Index"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
+                    <li><a asp-controller="Home" asp-action="SumeruApp"><span class="glyphicon glyphicon-phone"></span>  Sumeru App</a></li>
+                    <li><a asp-controller="Home" asp-action="About"><span class="glyphicon glyphicon-user"></span>  About</a></li>
+                    <li><a asp-controller="Home" asp-action="Support"><span class="glyphicon glyphicon-retweet"></span>  Support</a></li>
+                    <li><a asp-controller="Home" asp-action="Contact"><span class="glyphicon glyphicon-earphone"></span>  Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <p>&copy; 2019 - Sumeru. All rights reserved.</p>
+        </div>
+    </footer>
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
