@@ -217,3 +217,24 @@
             .social-links ul li a i {
                 font-size: 40px;
             }
+
+.scrollBar {
+    height: 15px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    
+}
+
+.scroll {
+    height: 15px;
+    width: 16.38%;
+    padding: 0;
+    display: inline-block;
+    border-right: 1px solid transparent;
+    background-color: #6666663d;
+}
+
+    .scroll:first-child {
+        border-right: none;
+    }
