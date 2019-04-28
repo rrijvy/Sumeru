@@ -223,7 +223,6 @@
     display: block;
     width: 100%;
     padding: 0;
-    
 }
 
 .scroll {
@@ -238,3 +237,33 @@
     .scroll:first-child {
         border-right: none;
     }
+
+
+#container {
+    overflow: hidden;
+    width: 100%;
+    height: 120px;
+    margin: 0 auto;
+    cursor: pointer;
+    margin-top: 70px;
+}
+
+#imgs {
+    display: block;
+    padding: 0;
+    width: 200%;
+    height: 100%;
+}
+
+    #imgs li {
+        height: 100%;
+        padding-right: 10px;
+        display: inline-block;
+        *display: inline;
+    }
+
+    #imgs img {
+        width: 160px;
+        height: 100%;
+    }
+

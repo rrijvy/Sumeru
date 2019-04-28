@@ -49,7 +49,6 @@
     </div>
 </div>
 
-
 <div class="scrollBar">
     <div class="scroll scroll-1"></div>
     <div class="scroll scroll-2"></div>
@@ -59,7 +58,6 @@
     <div class="scroll scroll-6"></div>
 </div>
 
-
 <div class="text">
     <h1>সুমেরু+ প্রচেষ্টা</h1>
     <h3>
@@ -67,9 +65,42 @@
     </h3>
 </div>
 
+<div id="container">
+    <ul id="imgs">
+        <li><img src="https://unsplash.it/800/600?image=489" alt="" /></li>
+        <li><img src="https://unsplash.it/800/600?image=487" alt="" /></li>
+        <li><img src="https://unsplash.it/800/600?image=486" alt="" /></li>
+        <li><img src="https://unsplash.it/800/600?image=485" alt="" /></li>
+        <li><img src="https://unsplash.it/800/600?image=484" alt="" /></li>
+        <li><img src="https://unsplash.it/800/600?image=487" alt="" /></li>
+        <li><img src="https://unsplash.it/800/600?image=486" alt="" /></li>
+        <li><img src="https://unsplash.it/800/600?image=485" alt="" /></li>
+        <li><img src="https://unsplash.it/800/600?image=484" alt="" /></li>
+        <li><img src="https://unsplash.it/800/600?image=483" alt="" /></li>
+        <li><img src="https://unsplash.it/800/600?image=485" alt="" /></li>
+        <li><img src="https://unsplash.it/800/600?image=484" alt="" /></li>
+        <li><img src="https://unsplash.it/800/600?image=483" alt="" /></li>
+        <li><img src="https://unsplash.it/800/600?image=485" alt="" /></li>
+        <li><img src="https://unsplash.it/800/600?image=484" alt="" /></li>
+        <li><img src="https://unsplash.it/800/600?image=483" alt="" /></li>
+    </ul>
+</div>
 
+@section Scripts{
+    <script src="~/js/ImageScroll.js"></script>
+    <script type="text/javascript">
+        $('#imgs').imageScroll({
+            orientation: "left",
+            speed: 600,
+            interval: 1000,
+            hoverPause: true,
+            callback: function () {
+                var ordinal = $(this).find("img").first().attr("src");
+                console.log(ordinal);
+                $(this).next("span").text("CallbackDisplay: hidden " + ordinal + "!");
+            }
+        });
+    </script>
 
-
-
-
-
+    
+}
